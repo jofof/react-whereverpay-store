@@ -4,6 +4,7 @@
   --mainWhite: #f3f3f3;
   --mainDark: #232528;
   --mainYellow: #ffa400;
+  --mainGreen: #00cc00;
 }
 
 body {
@@ -24,4 +25,24 @@ body {
 
 .text-dark {
   color: var(--mainDark);
+}
+
+.btn-black {
+  background: transparent;
+  text-transform: capitalize;
+  font-size: 0.8rem !important; /* overwrites default bootstrap value */
+  color: #009ffd;
+  border-radius: 0 !important;
+  border: 0.1rem solid var(--lightBlue) !important; /* only this line allows to display the button */
+}
+
+.btn-black:hover {
+  background: var(--mainBlue) !important;
+  color: var(--mainWhite) !important;
+}
+
+.cart-icon {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #ffa400;
 }

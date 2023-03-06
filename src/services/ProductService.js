@@ -25,7 +25,7 @@ const removeAll = () => {
   return http.delete(`/`)
 }
 
-const TutorialService = {
+const ProductService = {
   getAll,
   get,
   create,
@@ -34,4 +34,4 @@ const TutorialService = {
   removeAll,
 }
 
-export default TutorialService
+export default ProductService
