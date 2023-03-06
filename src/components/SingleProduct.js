@@ -1,14 +1,13 @@
 import React from 'react'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { ButtonContainer } from './Button'
 import { useSelector, useDispatch } from 'react-redux'
 import { getProductDetails } from '../redux/actions/productActions'
 import { addToCart } from '../redux/actions/cartAction'
-const SingleProduct = ({}) => {
+const SingleProduct = () => {
   const { id } = useParams()
-  /*const [cart, setCart] = useState([]) */
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
@@ -22,7 +21,7 @@ const SingleProduct = ({}) => {
     if (product && id !== product._id) {
       dispatch(getProductDetails(id))
     }
-  }, [dispatch])
+  }, [])
 
   const addToCartHandler = (event) => {
     event.preventDefault()
