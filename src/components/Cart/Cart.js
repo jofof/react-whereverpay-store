@@ -1,9 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Title from '../Title'
 import CartColumns from './CartColumns'
-import CartList from './CartList'
 import CartItem from './CartItem'
-import CartTotals from './CartTotals'
 import EmptyCart from './EmptyCart'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
@@ -12,7 +10,6 @@ const Cart = () => {
   const cartReducer = useSelector((state) => state.cartReducer)
   const { cartItems } = cartReducer
 
-  console.log('##### - CART ITEMS - ######', cartItems)
   const getSubTotal = () => {
     let subTotal = 0
     cartItems.map((item) => (subTotal += item.total))
@@ -54,9 +51,7 @@ const Cart = () => {
                   <button
                     className='btn btn-outline-danger text-uppercase mb-3 px-5'
                     type='button'
-                    onClick={() => {
-                      cartItems = {}
-                    }}
+                    onClick={() => {}}
                   >
                     clear cart
                   </button>
